@@ -18,6 +18,7 @@
 		 	<p>Pontuação</p>
 		 	<div class="progress [small-# large-#] [secondary alert success] [radius round]">
   				<span class="meter" style="width: {{pontuacao*100/total}}%"></span>
+  				<span ng-show="total > 0">({{pontuacao}}/{{total}})</span>
 			</div>
 		 </div>
 		 <div class="small-3 columns">
