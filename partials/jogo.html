@@ -1,0 +1,44 @@
+<!--div class="container-fluid">
+	<div class="row">
+		<div class="col-lg-12">
+			<p ng-repeat="nome in nomes">
+				{{nome}}
+			</p>
+		</div>
+		<p>Posicao do aceite = {{posicao}}</p>
+		<p>
+			{{sorteado1}}
+		</p>
+		<p>
+			{{sorteado2}}
+		</p>
+	</div>
+</div-->
+
+<div class="row">
+      <div class="large-12 columns">
+        <h1>Game name (TBD)</h1>
+      </div>
+    </div>
+
+	<div class="row">
+	
+		 <div class="small-3 columns">
+		 	<h3>Nomes aceites</h3>
+		 	<p>Tiago</p>
+		 </div>
+		 <div class="small-6 columns">
+		 	<h4>Escolha um nome:</h4>
+		 	<a href="#" class="button">{{sorteado1}}</a>
+		 	<p> Ou </p>
+		 	<a href="#" class="button">{{sorteado2}}</a>
+		 	<p>Pontuação</p>
+		 	<div class="progress [small-# large-#] [secondary alert success] [radius round]">
+  				<span class="meter" style="width: [1 - 100]%"></span>
+			</div>
+		 </div>
+		 <div class="small-3 columns">
+		 	<h3>Nomes não aceites</h3>
+		 	<p>Julianarete</p>	
+		 </div>	
+	</div>
