@@ -1,31 +1,37 @@
 <div class="row">
       <div class="large-12 columns">
-        <h1><img src="img/logo.png" alt="logotipo totonome"> Totonome</h1>
+        <h1><img src="img/logo.png" alt="logotipo totonome"> TotoNome</h1>
         <hr>
-        <p>Todos os anos, milhares de nomes próprios são avaliados pelo Instituto dos Registos e do Notariado. Só em 2014, houve mais de 5000 nomes enviados para consideração. É assim que se determina se cada novo cidadão ou cidadã pode ter um nome menos comum.<br>Face a duas possibilidades, consegues descobrir qual o nome que poderás dar ao teu rebento?</p> 
+        <p>Todos os anos, milhares de nomes próprios são avaliados pelo Instituto dos Registos e do Notariado. Só em 2014, houve mais de 5000 nomes enviados para consideração. É assim que se determina se cada novo cidadão ou cidadã pode ter um nome menos comum.</p>
+        <h4>Face a duas possibilidades, consegues descobrir qual o nome que poderás dar ao teu rebento?</h4>
       </div>
     </div>
 	<div class="row">
 		 <!--<div class="small-3 columns">
-		 	<h3>Nomes aceites</h3>
-		 	<p>Tiago</p>
+		 	  <h3>Nomes aceites</h3>
+		 	  <p>Tiago</p>
 		 </div>-->
+		 
+	 	 <h3 class="small-12 columns nome"><a href="" ng-click="clicked(0)" stop-event>{{sorteado1}}</a></h3>
+	 	 <p class="small-12  columns"> Ou </p>
+	 	 <h3 class="small-12 columns nome"><a href="" ng-click="clicked(1)" stop-event>{{sorteado2}}</a></h3>
+	 	 	
 		 <div class="small-12 columns">
-		 	<h4>Escolha um nome:</h4>
-		 	<a href="" class="button" ng-click="clicked(0)" stop-event>{{sorteado1}}</a>
-		 	<p> Ou </p>
-		 	<a href="" class="button" ng-click="clicked(1)" stop-event>{{sorteado2}}</a>
-		 	<p>Pontuação</p>
+		  <p>Pontuação</p>
 		 	<div class="progress [small-# large-#] [secondary alert success] [radius round]">
   				<span class="meter" style="width: {{pontuacao*100/total}}%"></span>
+  				<span ng-show="total > 0">({{pontuacao}}/{{total}})</span>
 			</div>
 		 </div>
 		 <!--<div class="small-3 columns">
-		 	<h3>Nomes não aceites</h3>
-		 	<p>Julianarete</p>	
+  		 	<h3>Nomes não aceites</h3>
+  		 	<p>Julianarete</p>	
 		 </div>-->
 	</div>
 	
 	<div id="footer" class="row">
-	    <p>Fritura rápida durante o Transparência Hackday com Marlene, Tiago, Ricardo, Isa, Margarida e Ana</p>
+	    <p class="small-12 columns">
+	      Fritura rápida durante o <a href="http://transparenciahackday.org">Transparência Hackday</a> com Marlene, <a href="http://tiagovieira.pt">Tiago</a>, <a href="https://twitter.com/rlaf">Ricardo</a>, Isa, <a href="https://twitter.com/mxmmargarida">Margarida</a> e <a href="http://twitter.com/aiscarvalho">Ana</a>.<br>
+	      Com o apoio da <a href="http://centraldedados.pt">Central de Dados</a>.
+	    </p>
 	</div>
