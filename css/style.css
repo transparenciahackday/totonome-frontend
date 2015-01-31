@@ -1,6 +1,41 @@
 /* Os nossos estilos */
 
 
+/* Tipografia
+*/
+
+@font-face {
+  font-family: 'UniversElse';
+  src: local('UniversElse'), url('../fonts/UniversElse-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'UniversElse Bold';
+  src: local('UniversElse Bold'), url('../fonts/UniversElse-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'LeagueSpartan';
+  src: local('LeagueSpartan'), url('../fonts/leaguespartan-bold.ttf') format('truetype');
+}
+
+body {
+    font-family: "UniversElse";
+}
+
+
+h1, h2, h3, h4, h5, h6,
+strong {
+    font-family: "UniversElse Bold";
+}
+
+h3.nome {
+    font-family: "LeagueSpartan";
+}
+
+/* Layout
+*/
+
 body {
     /*background: transparent url(../img/bebes.png) no-repeat center bottom;*/
 }
@@ -9,3 +44,8 @@ body {
     margin-top: 4em;
     font-size: 80%;
 }
+
+.progress {
+    border: 1px solid #ccc;
+}
+
