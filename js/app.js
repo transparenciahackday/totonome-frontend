@@ -16,3 +16,8 @@ angular.module('nome', [
         });
     }
 ]);
+
+angular.module('nome').run(function($rootScope) {
+    //$rootScope.serverAddress = "http://localhost:80/"
+    $rootScope.serverAddress = "https://totonome.herokuapp.com/";
+});
