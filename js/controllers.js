@@ -1,6 +1,6 @@
 angular.module('nome.controllers', [])
-    .controller('jogoCtrl', ["$scope", "Rest", "$timeout", "$routeParams", "$location",
-        function($scope, Rest, $timeout, $routeParams, $location) {
+    .controller('jogoCtrl', ["$scope", "Rest", "$timeout", "$routeParams", "$location", "$window",
+        function($scope, Rest, $timeout, $routeParams, $location, $window) {
 
             var nome1 = $routeParams.nome1 || null;
             var nome2 = $routeParams.nome2 || null;
@@ -12,6 +12,10 @@ angular.module('nome.controllers', [])
             $scope.$watch('sorteado2', function() {
                 $location.search('nome2', $scope.sorteado2);
             });
+
+            $scope.reload = function() {
+                $window.location.reload();
+            };
 
             $scope.pontuacao = 0;
             $scope.total = -1;
@@ -56,7 +60,10 @@ angular.module('nome.controllers', [])
                         else{
                             $("body").css("background-color","red");
                             $scope.vidas -= 1
-                            // se vidas < 0 então temos de fazer qualquer coisa
+
+                            if ($scope.vidas <= 0) {
+                                $('#myModal').foundation('reveal', 'open');
+                            }
                         }
 
                         if ($scope.total == -1) {
