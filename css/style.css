@@ -31,7 +31,7 @@ strong {
 }
 
 h1#logo,
-h2.name {
+.names h2 {
     font-family: "LeagueSpartan";
 }
 
@@ -59,7 +59,7 @@ h1#logo {
   display: inline-block;
   width: 22px;
   height: 19px;
-  background: aqua;
+  overflow: hidden;
 }
 
 #lives li {
@@ -67,7 +67,7 @@ h1#logo {
 }
 
 #lives li.lost {
-  background: transparent url(../img/lives.png) no-repeat -40px 0;
+  background: transparent url(../img/lives.png) no-repeat -101px 0;
 }
 
 .names #option-1,

@@ -1,6 +1,18 @@
 angular.module('nome.controllers', [])
-    .controller('jogoCtrl', ["$scope", "Rest", "$timeout",
-        function($scope, Rest, $timeout) {
+    .controller('jogoCtrl', ["$scope", "Rest", "$timeout", "$routeParams", "$location",
+        function($scope, Rest, $timeout, $routeParams, $location) {
+
+            var nome1 = $routeParams.nome1 || null;
+            var nome2 = $routeParams.nome2 || null;
+
+            $scope.$watch('sorteado1', function() {
+                $location.search('nome1', $scope.sorteado1);
+            });
+
+            $scope.$watch('sorteado2', function() {
+                $location.search('nome2', $scope.sorteado2);
+            });
+
             $scope.pontuacao = 0;
             $scope.total = -1;
             $scope.sorteado1 = ""
@@ -11,15 +23,21 @@ angular.module('nome.controllers', [])
             $scope.ultimo1 = ""
             $scope.ultimo2 = ""
 
-            Rest.getInitialWords().then(
-                function(data){
-                    $scope.sorteado1 = data.word1;
-                    $scope.sorteado2 = data.word2;
-                    $scope.ultimo1 = data.word1;
-                    $scope.ultimo2 = data.word2;
-                },
-                function(data){}
+            if (!nome1 || !nome2) {
+                Rest.getInitialWords().then(
+                    function (data) {
+                        $scope.sorteado1 = data.word1;
+                        $scope.sorteado2 = data.word2;
+                        $scope.ultimo1 = data.word1;
+                        $scope.ultimo2 = data.word2;
+                    },
+                    function (data) {
+                    }
                 )
+            } else {
+                $scope.sorteado1 = nome1;
+                $scope.sorteado2 = nome2;
+            }
 
             $scope.clicked = function(number){
                 if($scope.blocked) return

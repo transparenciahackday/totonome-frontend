@@ -5,6 +5,7 @@
 <section id="game" class="row collapse">
   <div class="row collapse">
     <h3 class="small-10 large-centered columns">Qual destes nomes foi aprovado?</h3>
+    <span>{{pontuacao}}</span>
     <ul id="lives" class="large-2 small-12 columns">
       <li>&nbsp;</li>
       <li>&nbsp;</li>
@@ -17,16 +18,8 @@
     <h2 id="option-2" class="row collapse" ng-click="clicked(1)" stop-event>{{sorteado2}}</h2>
   </div>
   <div id="" class="row collapse">
-    <p class="small-12 columns"><strong>Última jogada:</strong> X foi aceite e Y foi rejeita. <a href="">Partilhar</a></p>
+    <p class="small-12 columns" ng-show="total >0"><strong>Acertou!</strong> ({{ultimo1}} vs {{ultimo2}}) Desafia os teus amigos: <a twitter  data-lang="en" data-url='{{location.path}}/?nome1={{ultimo1}}\&nome1={{ultimo2}}' data-via='totonome' data-size="medium" data-text='Qual é o nome correcto: {{ultimo1}} ou {{ultimo2}} ?' ></a></p>
   </div>
-  <!-- Barra de pontuação
-  <div id="punctuation" class="small-12 columns">
-    <p>Pontuação</p>
-    <div class="progress [small-# large-#] [secondary alert success] [radius round]">
-        <span class="meter" style="width: {{pontuacao*100/total}}%"></span>
-        <span ng-show="total > 0">({{pontuacao}}/{{total}})</span>
-    </div>
-  </div>-->
 </section><!-- /#game -->
 
 <section id="about" class="row collapse">
