@@ -2,6 +2,10 @@ angular.module('nome.controllers', [])
     .controller('jogoCtrl', ["$scope", "Rest", "$timeout", "$routeParams", "$location",
         function($scope, Rest, $timeout, $routeParams, $location) {
 
+            $scope.range = function(n) {
+                return new Array(n);
+            };
+
             var nome1 = $routeParams.nome1 || null;
             var nome2 = $routeParams.nome2 || null;
 
@@ -15,13 +19,15 @@ angular.module('nome.controllers', [])
 
             $scope.pontuacao = 0;
             $scope.total = -1;
-            $scope.sorteado1 = ""
-            $scope.sorteado2 = ""
+            $scope.sorteado1 = "";
+            $scope.sorteado2 = "";
 
-            $scope.vidas = 3
+            $scope.vidasIniciais = 3;
+            $scope.vidas = $scope.vidasIniciais;
 
-            $scope.ultimo1 = ""
-            $scope.ultimo2 = ""
+            $scope.ultimo1 = "";
+            $scope.ultimo2 = "";
+            $scope.venceuUltimo = false;
 
             if (!nome1 || !nome2) {
                 Rest.getInitialWords().then(
@@ -50,11 +56,13 @@ angular.module('nome.controllers', [])
                 Rest.postAnswer(selectedWord, $scope.sorteado1, $scope.sorteado2).then(
                     function(data){
                         if(data.answer){
-                            $("body").css("background-color","green");
+                            $("body").css("background-color","#91e49e");
                             $scope.pontuacao += 1;
+                            $scope.venceuUltimo = true;
                         }
                         else{
-                            $("body").css("background-color","red");
+                            $("body").css("background-color","#f48a71");
+                            $scope.venceuUltimo = false;
                             $scope.vidas -= 1
                             // se vidas < 0 então temos de fazer qualquer coisa
                         }
@@ -73,7 +81,7 @@ angular.module('nome.controllers', [])
                             $scope.sorteado1 = data.word1;
                             $scope.sorteado2 = data.word2;
                             $scope.blocked = false
-                        }, 200);
+                        }, 500);
                     },
                     function(data){
 
