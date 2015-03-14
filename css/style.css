@@ -31,7 +31,7 @@ strong {
 }
 
 h1#logo,
-h2.name {
+.names h2 {
     font-family: "LeagueSpartan";
 }
 
@@ -39,9 +39,8 @@ h2.name {
 */
 
 body {
-    /*background: transparent url(../img/bebes.png) no-repeat center bottom;*/
     color: #0A2A34 !important;
-    background: #fff/*#fde09f*/;
+    background: #f5d48d/*#fde09f*/;
 }
 
 h1#logo {
@@ -57,19 +56,26 @@ h1#logo {
 }
 
 #lives li {
-  background: red;
-  padding: 0 5px;
   display: inline-block;
+  width: 22px;
+  height: 19px;
+  overflow: hidden;
 }
 
-.names {
+#lives li {
+  background: transparent url(../img/lives.png) no-repeat 0 0;
 }
 
-.names h2 {
+#lives li.lost {
+  background: transparent url(../img/lives.png) no-repeat -101px 0;
+}
+
+.names #option-1,
+.names #option-2 {
   padding: 1.5em 0.75em;
 }
 
-.names a:focus {
+.names h2:focus {
   outline: 0;
 }
 
@@ -107,18 +113,18 @@ h1#logo {
 }
 
 .names p.row {
-  background: #fff;
-  line-height: 1;
+  background: red;
+/*  line-height: 1;
   margin-bottom: 0;
-  height: 1px;
+  height: 1px;*/
   text-align: center;
 }
 
 .names p.row > em {
   font-size: 90%;
   font-style: normal;  
-  padding: 0.65em;
-  top: -.65em;
+  /*padding: 0.65em;
+  top: -.65em;*/
   z-index: 2500;
   background: #fff;
   border-radius: 20px;
