@@ -10,7 +10,8 @@ angular.module('nome', [
     function($routeProvider, $locationProvider, $httpProvider) {
         $routeProvider.when('/', {
             templateUrl: 'partials/jogo.html',
-            controller: 'jogoCtrl'
+            controller: 'jogoCtrl',
+            reloadOnSearch: false
         });
         $routeProvider.otherwise({
             redirectTo: '/'
