@@ -1,37 +1,43 @@
-<div class="row">
-      <div class="large-12 columns">
-        <h1><img src="img/logo.png" alt="logotipo totonome"> TotoNome</h1>
-        <hr>
-        <p>Todos os anos, milhares de nomes próprios são avaliados pelo Instituto dos Registos e do Notariado. Só em 2014, houve mais de 5000 nomes enviados para consideração. É assim que se determina se cada novo cidadão ou cidadã pode ter um nome menos comum.</p>
-        <h4>Face a duas possibilidades, consegues descobrir qual o nome que poderás dar ao teu rebento?</h4>
-      </div>
+<header class="row">
+    <h1 id="logo" class="large-3 small-12 columns"><img src="img/logo.png" alt="logotipo totonome"> TotoNome</h1>
+    <p class="large-9 small-12 columns">Todos os anos, milhares de nomes próprios são avaliados pelo Instituto dos Registos e do Notariado. Só em 2014, houve mais de 5000 nomes enviados para consideração. É assim que se determina se cada novo cidadão ou cidadã pode ter um nome menos comum.</p>
+</header>
+
+<section class="row collapse">
+  <div class="names large-9 small-12 columns">
+    <h3 class="row">Face a duas possibilidades, consegues descobrir qual o nome que poderás dar ao teu rebento?</h3>
+    <!--<div class="small-3 columns">
+      <h3>Nomes aceites</h3>
+      <p>Tiago</p>
+    </div>-->
+
+    <div id="option-1" class="small-12 columns">
+      <h2 class="row name"><a class="small-12 columns" href="" ng-click="clicked(0)" stop-event>{{sorteado1}}</a></h2>
     </div>
-	<div class="row">
-		 <!--<div class="small-3 columns">
-		 	  <h3>Nomes aceites</h3>
-		 	  <p>Tiago</p>
-		 </div>-->
-		 
-	 	 <h3 class="small-12 columns nome"><a href="" ng-click="clicked(0)" stop-event>{{sorteado1}}</a></h3>
-	 	 <p class="small-12  columns"> Ou </p>
-	 	 <h3 class="small-12 columns nome"><a href="" ng-click="clicked(1)" stop-event>{{sorteado2}}</a></h3>
-	 	 	
-		 <div class="small-12 columns">
-		  <p>Pontuação</p>
-		 	<div class="progress [small-# large-#] [secondary alert success] [radius round]">
-  				<span class="meter" style="width: {{pontuacao*100/total}}%"></span>
-  				<span ng-show="total > 0">({{pontuacao}}/{{total}})</span>
-			</div>
-		 </div>
-		 <!--<div class="small-3 columns">
-  		 	<h3>Nomes não aceites</h3>
-  		 	<p>Julianarete</p>	
-		 </div>-->
-	</div>
-	
-	<div id="footer" class="row">
-	    <p class="small-12 columns">
-	      Fritura rápida durante o <a href="http://transparenciahackday.org">Transparência Hackday</a> com Marlene, <a href="http://tiagovieira.pt">Tiago</a>, <a href="https://twitter.com/rlaf">Ricardo</a>, Isa, <a href="https://twitter.com/mxmmargarida">Margarida</a> e <a href="http://twitter.com/aiscarvalho">Ana</a>.<br>
-	      Com o apoio da <a href="http://centraldedados.pt">Central de Dados</a>.
-	    </p>
-	</div>
+    <p class="row"><em class="small-2 small-centered columns">Ou</em></p>
+    <div id="option-2" class="small-12 columns">
+      <h2 class="row name"><a class="small-12 columns" href="" ng-click="clicked(1)" stop-event>{{sorteado2}}</a></h2>
+    </div>
+  </div>
+  <div class="large-3 small-12 columns punctuation"> 
+    <div class="small-12 columns">
+      <p>Pontuação</p>
+      <div class="progress [small-# large-#] [secondary alert success] [radius round]">
+		      <span class="meter" style="width: {{pontuacao*100/total}}%"></span>
+		      <span ng-show="total > 0">({{pontuacao}}/{{total}})</span>
+      </div>
+      </div>
+    <!--<div class="small-3 columns">
+     	<h3>Nomes não aceites</h3>
+     	<p>Julianarete</p>	
+    </div>-->
+  </div>
+
+</section>
+
+<footer id="footer" class="row">
+  <p class="small-12 columns">
+    Fritura rápida durante o <a href="http://transparenciahackday.org">Transparência Hackday</a> com Marlene, <a href="http://tiagovieira.pt">Tiago</a>, <a href="https://twitter.com/rlaf">Ricardo</a>, Isa, <a href="https://twitter.com/mxmmargarida">Margarida</a> e <a href="http://twitter.com/aiscarvalho">Ana</a>.<br>
+    Com o apoio da <a href="http://centraldedados.pt">Central de Dados</a>.
+  </p>
+</footer>
