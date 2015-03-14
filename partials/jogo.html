@@ -2,7 +2,7 @@
     <h1 id="logo" class="small-12 columns"><img src="img/logo.png" alt="logotipo totonome"> TotoNome</h1>
 </header>
 
-<section class="row collapse">
+<section id="game" class="row collapse">
   <div class="row collapse">
     <h3 class="large-9 small-12 columns">Face a duas possibilidades, consegues descobrir qual o nome que poderás dar ao teu rebento?</h3>
     <ul id="lives" class="large-2 small-12 columns">
@@ -12,25 +12,25 @@
     </ul>
   </div>
   <div class="names row collapse">
-      <h2 id="option-1" class="name small-12 columns"><a href="" ng-click="clicked(0)" stop-event>{{sorteado1}}</a></h2>
+    <h2 id="option-1" class="name small-12 columns"><a href="" ng-click="clicked(0)" stop-event>{{sorteado1}}</a></h2>
     <p class="row"><em class="small-2 small-centered columns">Ou</em></p>
-      <h2 id="option-2" class="name small-12 columns"><a href="" ng-click="clicked(1)" stop-event>{{sorteado2}}</a></h2>
+    <h2 id="option-2" class="name small-12 columns"><a href="" ng-click="clicked(1)" stop-event>{{sorteado2}}</a></h2>
   </div>
-  
-  <div class="small-12 columns punctuation">
+  <!-- Barra de pontuação
+  <div id="punctuation" class="small-12 columns">
     <p>Pontuação</p>
     <div class="progress [small-# large-#] [secondary alert success] [radius round]">
         <span class="meter" style="width: {{pontuacao*100/total}}%"></span>
         <span ng-show="total > 0">({{pontuacao}}/{{total}})</span>
     </div>
-  </div>
+  </div>-->
+</section><!-- /#game -->
 
-</section>
-
-<section class="row about">
-    <h3 class="small-12 columns"><img src="img/logo.png" alt="logotipo totonome"> Sobre o TotoNome</h3>
+<section id="about" class="row">
+    <h3 class="small-12 columns">Sobre o TotoNome</h3>
     <p class="small-12 columns">Todos os anos, milhares de nomes próprios são avaliados pelo Instituto dos Registos e do Notariado. Só em 2014, houve mais de 5000 nomes enviados para consideração. É assim que se determina se cada novo cidadão ou cidadã pode ter um nome menos comum.</p>
-</section>
+    <p class="small-12 columns">O dataset que usamos xxxx link!</p>
+</section><!-- /#about -->
 
 <footer id="footer" class="row">
   <p class="small-12 columns">
