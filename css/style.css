@@ -5,13 +5,13 @@
 */
 
 @font-face {
-  font-family: 'UniversElse';
-  src: local('UniversElse'), url('../fonts/UniversElse-Regular.ttf') format('truetype');
+  font-family: 'Lato';
+  src: local('Lato'), url('../fonts/Lato-Regular.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'UniversElse Bold';
-  src: local('UniversElse Bold'), url('../fonts/UniversElse-Bold.ttf') format('truetype');
+  font-family: 'Lato Light';
+  src: local('Lato Light'), url('../fonts/Lato-Light.ttf') format('truetype');
 }
 
 @font-face {
@@ -20,16 +20,18 @@
 }
 
 body {
-    font-family: "UniversElse";
+    font-family: "Lato";
 }
 
 
 h1, h2, h3, h4, h5, h6,
 strong {
-    font-family: "UniversElse Bold";
+    font-family: "Lato Light";
+    color: #0A2A34 !important;
 }
 
-h3.nome {
+h1#logo,
+h2.name {
     font-family: "LeagueSpartan";
 }
 
@@ -38,6 +40,99 @@ h3.nome {
 
 body {
     /*background: transparent url(../img/bebes.png) no-repeat center bottom;*/
+    color: #0A2A34 !important;
+    background: #fff/*#fde09f*/;
+}
+
+h1#logo {
+  font-size: 3em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#lives {
+  margin: 0;
+  height: 8px;
+  text-align: right;
+}
+
+#lives li {
+  background: red;
+  padding: 0 5px;
+  display: inline-block;
+}
+
+.names {
+}
+
+.names a {
+  padding: 1.5em 0.75em;
+}
+
+.names a:focus {
+  outline: 0;
+}
+
+#option-1 a {
+  display: block;
+  text-align: center;
+  background: #f5c24d;
+  border-top: 1px solid #f5c24d;
+  border-left: 1px solid #f5c24d;
+  border-right: 1px solid #f5c24d;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+  transition: background-color 0.5s ease;
+  -webkit-transition: background-color 0.5s ease;
+  -moz-transition: background-color 0.5s ease;
+}
+
+#option-2 a {
+  display: block;
+  text-align: center;
+  background: #f5c24d;
+  border-bottom: 1px solid #f5c24d;
+  border-left: 1px solid #f5c24d;
+  border-right: 1px solid #f5c24d;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  transition: background-color 0.5s ease;
+  -webkit-transition: background-color 0.5s ease;
+  -moz-transition: background-color 0.5s ease;
+}
+
+#option-1 a:hover,
+#option-1 a:focus,
+#option-2 a:hover,
+#option-2 a:focus {
+  background: #edb431;
+}
+
+.names p.row {
+  background: #fff;
+  line-height: 1;
+  margin-bottom: 0;
+  height: 1px;
+  text-align: center;
+}
+
+.names p.row > em {
+  font-size: 90%;
+  font-style: normal;  
+  padding: 0.65em;
+  top: -.65em;
+  z-index: 2500;
+  background: #fff;
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;/*
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 0px 0px 5px rgba(0,0,0,0.5);*/
+}
+
+#about {
+  margin-top: 5em;
 }
 
 #footer {
