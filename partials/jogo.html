@@ -1,5 +1,5 @@
 <header class="row collapse">
-    <h1 id="logo" class="small-12 large-centered columns"><img src="img/logo.png" alt="logotipo totonome"> TotoNome</h1>
+    <h1 id="logo" class="small-12 large-centered columns"><img src="img/logo_light.png" alt="logotipo totonome"> TotoNome</h1>
 </header>
 
 <div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
@@ -10,19 +10,21 @@
 </div>
 <section id="game" class="row collapse">
   <div class="row collapse">
-    <h3 class="small-10 large-centered columns">Qual destes nomes foi aprovado?</h3>
-    <span>{{pontuacao}}</span>
-    <ul id="lives" class="large-2 small-12 columns">
-      <li ng-repeat="i in range(vidas) track by $index">&nbsp;</li>
-      <li ng-repeat="i in range(vidasIniciais-vidas) track by $index" class="lost">&nbsp;</li>
-    </ul>
+    <h3 class="large-10 small-12 columns">Qual destes nomes foi aprovado?</h3>
+    <div id="results" class="large-2 small-12 columns">
+      <ul id="lives" class="row">
+        <li ng-repeat="i in range(vidas) track by $index">&nbsp;</li>
+        <li ng-repeat="i in range(vidasIniciais-vidas) track by $index" class="lost">&nbsp;</li>
+      </ul>
+      <p class="row">{{pontuacao}} pontos</p>
+    </div>
   </div>
-  <div class="names">
+  <div id="names" class="row collapse">
     <h2 id="option-1" class="row collapse" ng-click="clicked(0)" stop-event>{{sorteado1}}</h2>
     <p class="row"><em>Ou</em></p>
     <h2 id="option-2" class="row collapse" ng-click="clicked(1)" stop-event>{{sorteado2}}</h2>
   </div>
-  <div id="" class="row collapse">
+  <div id="message" class="row collapse">
     <p class="small-12 columns" ng-show="total >0"><strong ng-show="venceuUltimo">Acertou!</strong><strong ng-show="!venceuUltimo">Falhou!</strong> ({{ultimo1}} vs {{ultimo2}}) <a target="_blank" href="{{challengeLink}}">Desafia os teus amigos!</a></p>
   </div>
 </section><!-- /#game -->
@@ -36,6 +38,7 @@
 
 <footer id="footer" class="row collapse">
   <p class="small-12 columns">
+    <b>Mudar aqui o texto. já está desactualizado =)</b>
     Fritura rápida durante o <a href="http://transparenciahackday.org">Transparência Hackday</a> com Marlene, <a href="http://tiagovieira.pt">Tiago</a>, <a href="https://twitter.com/rlaf">Ricardo</a>, Isa, <a href="https://twitter.com/mxmmargarida">Margarida</a> e <a href="http://twitter.com/aiscarvalho">Ana</a>.<br>
     Com o apoio da <a href="http://centraldedados.pt">Central de Dados</a>.
   </p>

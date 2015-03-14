@@ -27,11 +27,14 @@ body {
 h1, h2, h3, h4, h5, h6,
 strong {
     font-family: "Lato Light";
-    color: #0A2A34 !important;
+    color: #f5d48d !important;
 }
 
 h1#logo,
-.names h2 {
+#names h2,
+#results p,
+#message p,
+#message p strong {
     font-family: "LeagueSpartan";
 }
 
@@ -39,20 +42,30 @@ h1#logo,
 */
 
 body {
-    color: #0A2A34 !important;
-    background: #f5d48d/*#fde09f*/;
+    color: #f5d48d !important;
+    background: #0A2A34/*#fde09f*/;
 }
 
 h1#logo {
-  text-align: center;
-  font-size: 3em;
+  font-size: 2em;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
+h1#logo img {
+  height: 60px;
+  width: auto;
+}
+
+
+#results {
+  text-align: right;
+}
+
 #lives {
+  height: 19px;
   margin: 0;
-  height: 8px;
+  padding: 0;
 }
 
 #lives li {
@@ -60,6 +73,7 @@ h1#logo {
   width: 22px;
   height: 19px;
   overflow: hidden;
+  margin: 0 2px;
 }
 
 #lives li {
@@ -70,17 +84,26 @@ h1#logo {
   background: transparent url(../img/lives.png) no-repeat -101px 0;
 }
 
-.names #option-1,
-.names #option-2 {
-  padding: 1.5em 0.75em;
+#results p {
+  font-size: 0.75em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 5px 0 0;
+  margin: 0;
 }
 
-.names h2:focus {
+#names #option-1,
+#names #option-2 {
+  padding: 1.5em 0.75em;
+  color: #0A2A34 !important;
+  text-align: center;
+}
+
+#names h2:focus {
   outline: 0;
 }
 
 #option-1 {
-  text-align: center;
   background: #f5c24d;
   border-top: 1px solid #f5c24d;
   border-left: 1px solid #f5c24d;
@@ -93,7 +116,6 @@ h1#logo {
 }
 
 #option-2 {
-  text-align: center;
   background: #f5c24d;
   border-bottom: 1px solid #f5c24d;
   border-left: 1px solid #f5c24d;
@@ -112,19 +134,20 @@ h1#logo {
   background: #edb431;
 }
 
-.names p.row {
+#names p.row {
+  color: #0A2A34;
   background: red;
-/*  line-height: 1;
+  line-height: 1;
   margin-bottom: 0;
-  height: 1px;*/
+  height: 1px;
   text-align: center;
 }
 
-.names p.row > em {
+#names p.row > em {
   font-size: 90%;
   font-style: normal;  
-  /*padding: 0.65em;
-  top: -.65em;*/
+  padding: 0.65em;
+  top: -.65em;
   z-index: 2500;
   background: #fff;
   border-radius: 20px;
