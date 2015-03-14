@@ -35,10 +35,6 @@ h2.name {
     font-family: "LeagueSpartan";
 }
 
-#logo img {
-  display: block;
-}
-
 /* Layout
 */
 
@@ -49,9 +45,21 @@ body {
 }
 
 h1#logo {
-  font-size: 1.5em;
+  font-size: 3em;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+
+#lives {
+  margin: 0;
+  height: 8px;
+  text-align: right;
+}
+
+#lives li {
+  background: red;
+  padding: 0 5px;
+  display: inline-block;
 }
 
 .names {
@@ -65,7 +73,8 @@ h1#logo {
   outline: 0;
 }
 
-#option-1 {
+#option-1 a {
+  display: block;
   text-align: center;
   background: #f5c24d;
   border-top: 1px solid #f5c24d;
@@ -78,7 +87,8 @@ h1#logo {
   -moz-transition: background-color 0.5s ease;
 }
 
-#option-2 {
+#option-2 a {
+  display: block;
   text-align: center;
   background: #f5c24d;
   border-bottom: 1px solid #f5c24d;
@@ -91,10 +101,10 @@ h1#logo {
   -moz-transition: background-color 0.5s ease;
 }
 
-#option-1:hover,
-#option-1:focus,
-#option-2:hover,
-#option-2:focus {
+#option-1 a:hover,
+#option-1 a:focus,
+#option-2 a:hover,
+#option-2 a:focus {
   background: #edb431;
 }
 
