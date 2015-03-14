@@ -4,11 +4,10 @@
 
 <div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
     <h2 id="modalTitle">Perdeste!</h2>
-    <p class="lead">Ganhaste {{pontuacao}} pontos!</p>
-    <p>Partilha a tua pontuação! Ou <a ng-click="reload()">joga outra vez</a></p>
+    <p class="lead">Conseguiste {{pontuacao}} pontos!</p>
+    <p><a target="_blank" href="{{scoreLink}}">Partilha a tua pontuação</a> ou <a ng-click="reload()">joga outra vez</a></p>
     <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div>
-
 <section id="game" class="row collapse">
   <div class="row collapse">
     <h3 class="small-10 large-centered columns">Qual destes nomes foi aprovado?</h3>
@@ -24,7 +23,7 @@
     <h2 id="option-2" class="row collapse" ng-click="clicked(1)" stop-event>{{sorteado2}}</h2>
   </div>
   <div id="" class="row collapse">
-    <p class="small-12 columns" ng-show="total >0"><strong ng-show="venceuUltimo">Acertou!</strong><strong ng-show="!venceuUltimo">Falhou!</strong> ({{ultimo1}} vs {{ultimo2}}) Desafia os teus amigos: <a twitter  data-lang="en" data-url='{{location.path}}/?nome1={{ultimo1}}\&nome1={{ultimo2}}' data-via='totonome' data-size="medium" data-text='Qual é o nome correcto: {{ultimo1}} ou {{ultimo2}} ?' ></a></p>
+    <p class="small-12 columns" ng-show="total >0"><strong ng-show="venceuUltimo">Acertou!</strong><strong ng-show="!venceuUltimo">Falhou!</strong> ({{ultimo1}} vs {{ultimo2}}) <a target="_blank" href="{{challengeLink}}">Desafia os teus amigos!</a></p>
   </div>
 </section><!-- /#game -->
 
