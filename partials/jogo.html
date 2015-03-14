@@ -4,17 +4,17 @@
 
 <section id="game" class="row collapse">
   <div class="row collapse">
-    <h3 class="small-12 large-centered columns">Qual destes nomes foi aprovado?</h3>
+    <h3 class="small-10 large-centered columns">Qual destes nomes foi aprovado?</h3>
     <ul id="lives" class="large-2 small-12 columns">
       <li>&nbsp;</li>
       <li>&nbsp;</li>
-      <li>&nbsp;</li>
+      <li class="lost">&nbsp;</li>
     </ul>
   </div>
-  <div class="names row collapse">
-    <h2 id="option-1" class="name small-12 columns" ng-click="clicked(0)" stop-event>{{sorteado1}}</h2>
-    <p class="row"><em class="small-2 small-centered columns">Ou</em></p>
-    <h2 id="option-2" class="name small-12 columns" ng-click="clicked(1)" stop-event>{{sorteado2}}</h2>
+  <div class="names">
+    <h2 id="option-1" class="row collapse" ng-click="clicked(0)" stop-event>{{sorteado1}}</h2>
+    <p class="row"><em>Ou</em></p>
+    <h2 id="option-2" class="row collapse" ng-click="clicked(1)" stop-event>{{sorteado2}}</h2>
   </div>
   <div id="" class="row collapse">
     <p class="small-12 columns"><strong>Última jogada:</strong> X foi aceite e Y foi rejeita. <a href="">Partilhar</a></p>
