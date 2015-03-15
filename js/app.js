@@ -4,8 +4,7 @@ angular.module('nome', [
     'nome.controllers',
     'nome.directives',
     'ngRoute',
-    'ngResource',
-    'djds4rce.angular-socialshare'
+    'ngResource'
 ]).config(['$routeProvider', '$locationProvider', '$httpProvider',
     function($routeProvider, $locationProvider, $httpProvider) {
         $routeProvider.when('/', {

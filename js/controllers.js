@@ -8,6 +8,9 @@ angular.module('nome.controllers', [])
 
             var nome1 = $routeParams.nome1 || null;
             var nome2 = $routeParams.nome2 || null;
+            if(nome2){
+                nome2 = nome2.replace("/","");
+            }
 
             $scope.$watch('sorteado1', function() {
                 $location.search('nome1', $scope.sorteado1);
@@ -59,6 +62,14 @@ angular.module('nome.controllers', [])
 
                 Rest.postAnswer(selectedWord, $scope.sorteado1, $scope.sorteado2).then(
                     function(data){
+                        // criar aqui o link de share
+                        $scope.challengeLink = "https://twitter.com/intent/tweet?";
+                        $scope.challengeLink += "original_referer=" + encodeURIComponent( $location.absUrl() ) +"&";
+                        $scope.challengeLink += "text="+ encodeURIComponent( "Qual é o nome correcto? " + $scope.sorteado1 + " ou " + $scope.sorteado2 ) +"&";
+                        $scope.challengeLink += "tw_p=tweetbutton&";
+                        $scope.challengeLink += "url="+ encodeURIComponent( $location.absUrl() ) +"&";
+                        $scope.challengeLink += "via=totonome";
+
                         if(data.answer){
                             $("body").css("background-color","#91e49e");
                             $scope.pontuacao += 1;
@@ -70,6 +81,15 @@ angular.module('nome.controllers', [])
                             $scope.vidas -= 1
 
                             if ($scope.vidas <= 0) {
+                                console.log($location.absUrl());
+                                console.log($location.host());
+                                $scope.scoreLink = "https://twitter.com/intent/tweet?";
+                                $scope.scoreLink += "original_referer=" + encodeURIComponent( "http://" + $location.host() ) +"&";
+                                $scope.scoreLink += "text="+ encodeURIComponent( "Consegui " + $scope.pontuacao + " pontos! E tu, quantos consegues?" ) +"&";
+                                $scope.scoreLink += "tw_p=tweetbutton&";
+                                $scope.scoreLink += "url="+ encodeURIComponent( "http://" + $location.host() ) +"&";
+                                $scope.scoreLink += "via=totonome";
+                                console.log($scope.scoreLink);
                                 $('#myModal').foundation('reveal', 'open');
                             }
                         }
@@ -82,7 +102,7 @@ angular.module('nome.controllers', [])
                         }
 
                         $timeout(function() {
-                            $("body").css("background-color","white");
+                            $("body").css("background-color","#f5d48d");
                             $scope.ultimo1 = $scope.sorteado1;
                             $scope.ultimo2 = $scope.sorteado2;
                             $scope.sorteado1 = data.word1;

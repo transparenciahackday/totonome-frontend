@@ -4,11 +4,10 @@
 
 <div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
     <h2 id="modalTitle">Perdeste!</h2>
-    <p class="lead">Ganhaste {{pontuacao}} pontos!</p>
-    <p>Partilha a tua pontuação! Ou <a ng-click="reload()">joga outra vez</a></p>
+    <p class="lead">Conseguiste {{pontuacao}} pontos!</p>
+    <p><a target="_blank" href="{{scoreLink}}">Partilha a tua pontuação</a> ou <a ng-click="reload()">joga outra vez</a></p>
     <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div>
-
 <section id="game">
   <div class="row medium-uncollapse large-collapse">
     <h3 class="large-8 large-offset-2 small-12 columns">Qual destes nomes foi aprovado?</h3>
@@ -26,7 +25,7 @@
     <h2 id="option-2" class="row medium-uncollapse large-collapse" ng-click="clicked(1)" stop-event><span class="refused">&nbsp;</span> {{sorteado2}}</h2>
   </div>
   <div id="message" class="row medium-uncollapse large-collapse">
-    <p class="small-12 columns" ng-show="total >0"><strong ng-show="venceuUltimo">Acertou!</strong><strong ng-show="!venceuUltimo">Falhou!</strong> ({{ultimo1}} vs {{ultimo2}}) Desafia os teus amigos: <a twitter  data-lang="en" data-url='{{location.path}}/?nome1={{ultimo1}}\&nome1={{ultimo2}}' data-via='totonome' data-size="medium" data-text='Qual é o nome correcto: {{ultimo1}} ou {{ultimo2}} ?' ></a></p>
+    <p class="small-12 columns" ng-show="total >0"><strong ng-show="venceuUltimo">Acertaste!</strong><strong ng-show="!venceuUltimo">Falhaste!</strong> ({{ultimo1}} vs {{ultimo2}}) <a target="_blank" href="{{challengeLink}}">Desafia os teus amigos!</a></p>
   </div>
 </section><!-- /#game -->
 
@@ -39,6 +38,7 @@
 
 <footer id="footer" class="row medium-uncollapse large-collapse">
   <p class="small-12 columns">
+    <b>Mudar aqui o texto. já está desactualizado =)</b>
     Fritura rápida durante o <a href="http://transparenciahackday.org">Transparência Hackday</a> com Marlene, <a href="http://tiagovieira.pt">Tiago</a>, <a href="https://twitter.com/rlaf">Ricardo</a>, Isa, <a href="https://twitter.com/mxmmargarida">Margarida</a> e <a href="http://twitter.com/aiscarvalho">Ana</a>.<br>
     Com o apoio da <a href="http://centraldedados.pt">Central de Dados</a>.
   </p>
