@@ -27,14 +27,11 @@ body {
 h1, h2, h3, h4, h5, h6,
 strong {
     font-family: "Lato Light";
-    color: #f5d48d !important;
+    color: #0A2A34 !important;
 }
 
 h1#logo,
-#names h2,
-#results p,
-#message p,
-#message p strong {
+#results p {
     font-family: "LeagueSpartan";
 }
 
@@ -42,21 +39,24 @@ h1#logo,
 */
 
 body {
-    color: #f5d48d !important;
-    background: #0A2A34/*#fde09f*/;
+    color: #0A2A34 !important;
+    background: #f5c24d/*#fde09f*/;
 }
 
 h1#logo {
-  font-size: 2em;
+  text-align: center;
+  margin-top: -10px;
+/*  font-size: 2em;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 2px;*/
 }
 
 h1#logo img {
-  height: 60px;
-  width: auto;
 }
 
+#game {
+  text-align: center;
+}
 
 #results {
   text-align: right;
@@ -94,9 +94,10 @@ h1#logo img {
 
 #names #option-1,
 #names #option-2 {
-  padding: 1.5em 0.75em;
-  color: #0A2A34 !important;
-  text-align: center;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  color: #f5c24d !important;
+  cursor: pointer;
 }
 
 #names h2:focus {
@@ -104,10 +105,7 @@ h1#logo img {
 }
 
 #option-1 {
-  background: #f5c24d;
-  border-top: 1px solid #f5c24d;
-  border-left: 1px solid #f5c24d;
-  border-right: 1px solid #f5c24d;
+  background: #293742;
   border-top-right-radius: 12px;
   border-top-left-radius: 12px;
   transition: background-color 0.5s ease;
@@ -116,10 +114,7 @@ h1#logo img {
 }
 
 #option-2 {
-  background: #f5c24d;
-  border-bottom: 1px solid #f5c24d;
-  border-left: 1px solid #f5c24d;
-  border-right: 1px solid #f5c24d;
+  background: #293742;
   border-bottom-right-radius: 12px;
   border-bottom-left-radius: 12px;
   transition: background-color 0.5s ease;
@@ -127,16 +122,28 @@ h1#logo img {
   -moz-transition: background-color 0.5s ease;
 }
 
+#names .approved {
+  display: inline-block;
+  padding: 0 13px;
+  background: transparent url(../img/approved.png) no-repeat center center;
+}
+
+#names .refused {
+  display: inline-block;
+  padding: 0 13px;
+  background: transparent url(../img/refused.png) no-repeat center center;
+}
+
 #option-1:hover,
 #option-1:focus,
 #option-2:hover,
 #option-2:focus {
-  background: #edb431;
+  background: #0A2A34;
 }
 
 #names p.row {
   color: #0A2A34;
-  background: red;
+  background: #fff;
   line-height: 1;
   margin-bottom: 0;
   height: 1px;

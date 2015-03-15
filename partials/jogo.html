@@ -1,5 +1,5 @@
-<header class="row collapse">
-    <h1 id="logo" class="small-12 large-centered columns"><img src="img/logo_light.png" alt="logotipo totonome"> TotoNome</h1>
+<header class="row medium-uncollapse large-collapse">
+    <h1 id="logo" class="small-12 small-centered columns"><img src="img/totonome.png" alt="logotipo totonome"></h1>
 </header>
 
 <div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
@@ -9,35 +9,35 @@
     <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div>
 
-<section id="game" class="row collapse">
-  <div class="row collapse">
-    <h3 class="large-10 small-12 columns">Qual destes nomes foi aprovado?</h3>
+<section id="game">
+  <div class="row medium-uncollapse large-collapse">
+    <h3 class="large-8 large-offset-2 small-12 columns">Qual destes nomes foi aprovado?</h3>
     <div id="results" class="large-2 small-12 columns">
       <ul id="lives" class="row">
         <li ng-repeat="i in range(vidas) track by $index">&nbsp;</li>
         <li ng-repeat="i in range(vidasIniciais-vidas) track by $index" class="lost">&nbsp;</li>
       </ul>
       <p class="row">{{pontuacao}} pontos</p>
-    </div>
+   </div>
   </div>
-  <div id="names" class="row collapse">
-    <h2 id="option-1" class="row collapse" ng-click="clicked(0)" stop-event>{{sorteado1}}</h2>
-    <p class="row"><em>Ou</em></p>
-    <h2 id="option-2" class="row collapse" ng-click="clicked(1)" stop-event>{{sorteado2}}</h2>
+  <div id="names" class="row medium-uncollapse large-collapse">
+    <h2 id="option-1" class="row medium-uncollapse large-collapse" ng-click="clicked(0)" stop-event><span class="approved">&nbsp;</span> {{sorteado1}}</h2>
+    <p class="row medium-uncollapse large-collapse"><em>Ou</em></p>
+    <h2 id="option-2" class="row medium-uncollapse large-collapse" ng-click="clicked(1)" stop-event><span class="refused">&nbsp;</span> {{sorteado2}}</h2>
   </div>
-  <div id="message" class="row collapse">
+  <div id="message" class="row medium-uncollapse large-collapse">
     <p class="small-12 columns" ng-show="total >0"><strong ng-show="venceuUltimo">Acertou!</strong><strong ng-show="!venceuUltimo">Falhou!</strong> ({{ultimo1}} vs {{ultimo2}}) Desafia os teus amigos: <a twitter  data-lang="en" data-url='{{location.path}}/?nome1={{ultimo1}}\&nome1={{ultimo2}}' data-via='totonome' data-size="medium" data-text='Qual é o nome correcto: {{ultimo1}} ou {{ultimo2}} ?' ></a></p>
   </div>
 </section><!-- /#game -->
 
-<section id="about" class="row collapse">
+<section id="about" class="row medium-uncollapse large-collapse">
     <h3 class="small-12 columns">Sobre o TotoNome</h3>
     <p class="small-12 columns">Todos os anos, milhares de nomes próprios são avaliados pelo Instituto dos Registos e do Notariado. Só em 2014, houve mais de 5000 nomes enviados para consideração. É assim que se determina se cada novo cidadão ou cidadã pode ter um nome menos comum.</p>
     <p class="small-12 columns">Face a duas possibilidades, consegues descobrir qual o nome que poderás dar ao teu rebento?</p>
     <p class="small-12 columns">O dataset que usamos xxxx link!</p>
 </section><!-- /#about -->
 
-<footer id="footer" class="row collapse">
+<footer id="footer" class="row medium-uncollapse large-collapse">
   <p class="small-12 columns">
     Fritura rápida durante o <a href="http://transparenciahackday.org">Transparência Hackday</a> com Marlene, <a href="http://tiagovieira.pt">Tiago</a>, <a href="https://twitter.com/rlaf">Ricardo</a>, Isa, <a href="https://twitter.com/mxmmargarida">Margarida</a> e <a href="http://twitter.com/aiscarvalho">Ana</a>.<br>
     Com o apoio da <a href="http://centraldedados.pt">Central de Dados</a>.
