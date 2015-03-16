@@ -20,9 +20,13 @@
    </div>
   </div>
   <div id="names" class="row medium-uncollapse large-collapse">
-    <h2 id="option-1" class="row medium-uncollapse large-collapse" ng-click="clicked(0)" stop-event><span class="approved">&nbsp;</span> {{sorteado1}}</h2>
+    <h2 id="option-1" class="row medium-uncollapse large-collapse" ng-click="clicked(0)" stop-event 
+      ng-class="ultimaRespostaCorrecta!=''?(ultimaRespostaCorrecta==sorteado1?'correct':''):(selectedWord==sorteado1?'selected':(blocked?'unselected':''))">
+    <!--span class="approved">&nbsp;</span-->{{sorteado1}}</h2>
     <p class="row medium-uncollapse large-collapse"><em>Ou</em></p>
-    <h2 id="option-2" class="row medium-uncollapse large-collapse" ng-click="clicked(1)" stop-event><span class="refused">&nbsp;</span> {{sorteado2}}</h2>
+    <h2 id="option-2" class="row medium-uncollapse large-collapse" ng-click="clicked(1)" stop-event 
+      ng-class="ultimaRespostaCorrecta!=''?(ultimaRespostaCorrecta==sorteado2?'correct':''):(selectedWord==sorteado2?'selected':(blocked?'unselected':''))">
+    <!--span class="refused">&nbsp;</span-->{{sorteado2}}</h2>
   </div>
   <div id="message" class="row medium-uncollapse large-collapse">
     <p class="small-12 columns" ng-show="total >0"><strong ng-show="venceuUltimo">Acertaste!</strong><strong ng-show="!venceuUltimo">Falhaste!</strong> ({{ultimo1}} vs {{ultimo2}}) <a target="_blank" href="{{challengeLink}}">Desafia os teus amigos!</a></p>

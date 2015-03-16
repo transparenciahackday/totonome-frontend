@@ -1,5 +1,13 @@
 /* Os nossos estilos */
-
+.selected{
+  background-color: #333 !important;
+}
+.unselected{
+  background-color: #666 !important;
+}
+.correct{
+  background-color: #009933 !important;
+}
 
 /* Tipografia
 */
