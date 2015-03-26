@@ -1,13 +1,4 @@
 /* Os nossos estilos */
-.selected{
-  background-color: #333 !important;
-}
-.unselected{
-  background-color: #666 !important;
-}
-.correct{
-  background-color: #009933 !important;
-}
 
 /* Tipografia
 */
@@ -118,6 +109,7 @@ normal - #293742
 
 #option-1 {
   background: #fff;
+  border: 3px solid #fff;
   border-top-right-radius: 12px;
   border-top-left-radius: 12px;
   transition: background-color 0.5s ease;
@@ -127,6 +119,7 @@ normal - #293742
 
 #option-2 {
   background: #fff;
+  border: 3px solid #fff;
   border-bottom-right-radius: 12px;
   border-bottom-left-radius: 12px;
   transition: background-color 0.5s ease;
@@ -138,8 +131,21 @@ normal - #293742
 #option-1:focus,
 #option-2:hover,
 #option-2:focus {
-  background: pink;
+  background: #fde09f;
+  border: 3px solid #fff;
 }
+
+.selected{
+  background-color: #fde09f !important;
+  border: 3px solid #517e8c !important;
+}
+.unselected{
+  background-color: #fff !important;
+}
+.correct{
+  background-color: #009933 !important;
+}
+
 
 #names p.row {
   background: #f5c24d;
@@ -150,7 +156,6 @@ normal - #293742
 }
 
 #names p.row > em {
-  color: #293742;
   font-size: 80%;
   font-style: normal; 
   text-transform: uppercase;
@@ -171,9 +176,15 @@ normal - #293742
 }
 
 #message p {
-  background: #0A2A34;
-  color: #fff;
+  background: #f06f50;
   padding: 10px;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+#message p a {
+  color: #293742 !important;
+  border-bottom: 1px solid #fff;
 }
 
 #about {
