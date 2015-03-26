@@ -4,8 +4,8 @@
 
 <div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
     <h2 id="modalTitle">Perdeste!</h2>
-    <p class="lead">Conseguiste {{pontuacao}} pontos!</p>
-    <p><a target="_blank" href="{{scoreLink}}">Partilha a tua pontuação</a> ou <a ng-click="reload()">joga outra vez</a></p>
+    <p class="lead">Não era fácil, mas conseguiste {{pontuacao}} pontos!</p>
+    <p><a target="_blank" href="{{scoreLink}}">Partilha a tua pontuação</a> ou <a ng-click="reload()">joga outra vez</a>!</p>
     <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div>
 <section id="game">
@@ -37,21 +37,21 @@
 
     <h3 class="small-12 columns">O que é o Totonome?</h3>
     
-    <p class="small-12 columns">Todos os anos, milhares de nomes próprios são avaliados pelo <a href="http://irn.mj.pt">Instituto dos Registos e do Notariado</a>, e só em 2014 houve mais de 5000 nomes enviados para consideração.  É assim que se determina se cada novo cidadão ou cidadã pode ter um nome menos comum.</p>
+    <p class="small-12 columns">Todos os anos, milhares de nomes próprios são avaliados pelo Instituto dos Registos e do Notariado</a>, e só em 2014 houve mais de 5000 nomes enviados para consideração.  É assim que se determina se cada novo cidadão ou cidadã pode ter um nome menos comum.</p>
     <p class="small-12 columns">O Totonome é um jogo que testa o critério de cada pessoa para determinar se um nome próprio poderia ou não ser registado em Portugal. São apresentadas duas escolhas, e ambas provêm de pedidos de aprovação que foram feitos ao IRN: uma das escolhas foi aceite, a outra não. Consegues descobrir qual o nome que passou a ser permitido, e qual ficou pelo caminho?</p>
 
     <h3 class="small-12 columns">Como foi feito?</h3>
 
     <p class="small-12 columns">O Totonome é uma aplicação construída com <a href="http://angularjs.org">AngularJS</a> e <a href="http://foundation.zurb.com">Foundation</a>, junto com um pequeno servidor que usa <a href="http://django-rest-framework.org">Django REST</a> para validar e registar as escolhas. Os ícones e a ilustração do título foram feitos com papel, lápis e <a href="http://inkscape.org">Inkscape</a>.</p>
-    <p class="small-12 columns">O dataset dos nomes foi extraído, compilado e colocado na <a href="http://centraldedados.pt/nomes_proprios/">Central de Dados</a>, usando o <a href="http://tabula.technology">Tabula</a> e <a href="https://csvkit.readthedocs.org/">CSVkit</a>, com o propósito principal de ser empregue neste jogo.  A <a href="http://www.irn.mj.pt/sections/irn/a_registral/registos-centrais/docs-da-nacionalidade/vocabulos-admitidos-e/">base de dados original</a> é disponibilizada no site do Instituto dos Registos e Notariado.</p>
+    <p class="small-12 columns">O dataset dos nomes foi extraído, compilado e colocado na <a href="http://centraldedados.pt/nomes_proprios/">Central de Dados</a>, usando o <a href="http://tabula.technology">Tabula</a> e <a href="https://csvkit.readthedocs.org/">CSVkit</a>, com o propósito principal de ser empregue neste jogo.  A <a href="http://www.irn.mj.pt/sections/irn/a_registral/registos-centrais/docs-da-nacionalidade/vocabulos-admitidos-e/">base de dados original</a> é disponibilizada no <a href="http://irn.mj.pt">site</a> do IRN.</p>
 
     <h3 class="small-12 columns">Quem fez?</h3>
     <p class="small-12 columns">A ideia original e um primeiro protótipo foram congeminados durante uma sessão de trabalho do <a href="http://transparenciahackday.org">Transparência Hackday Portugal</a>. O jogo foi mostrado ao público pela primeira vez no <a href="http://transparenciahackday.org/2015/03/open-data-day-2015-o-rescaldo/">Open Data Day Portugal 2015</a>.</p>
     <p class="small-12 columns">A versão atual do jogo tem sido afinada e mantida por:</p>
     <ul>
-      <li><a href="http://tiagovieira.pt">Tiago Vieira</a> -- development do back-end</li>
-      <li><a href="http://twitter.com/aiscarvalho">Ana Isabel Carvalho</a> -- design do front-end</li>
-      <li><a href="http://twitter.com/rlaf">Ricardo Lafuente</a> -- arquitetura de dados e copywriting</li>
+      <li><a href="http://tiagovieira.pt">Tiago Vieira</a> &ndash; development do back-end</li>
+      <li><a href="http://twitter.com/aiscarvalho">Ana Isabel Carvalho</a> &ndash; design do front-end</li>
+      <li><a href="http://twitter.com/rlaf">Ricardo Lafuente</a> &ndash; arquitetura de dados e copywriting</li>
     </ul>
     <p class="small-12 columns">O Totonome contou igualmente com os preciosos contributos da Isa Neves, da Marlene Martins, da Margarida Carvalho e do Pedro Fernandes.</p>
 
