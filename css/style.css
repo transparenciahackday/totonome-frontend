@@ -178,8 +178,7 @@ normal - #293742
 #message p {
   background: #f06f50;
   padding: 10px;
-  border-bottom-right-radius: 12px;
-  border-bottom-left-radius: 12px;
+  border-radius: 12px;
 }
 
 #message p a {
