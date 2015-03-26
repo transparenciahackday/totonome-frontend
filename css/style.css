@@ -213,7 +213,7 @@ normal - #293742
 
 #myModal h2 { color: #fff !important; }
 
-#myModal p a {
+#myModal p a.btn {
   font-size: 70%;
   text-transform: uppercase;
   color: #0A2A34;
