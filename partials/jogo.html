@@ -4,8 +4,13 @@
 
 <div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
     <h2 id="modalTitle">Perdeste!</h2>
-    <p class="lead">Conseguiste {{pontuacao}} pontos!</p>
-    <p><a target="_blank" href="{{scoreLink}}">Partilha a tua pontuação</a> ou <a ng-click="reload()">joga outra vez</a></p>
+    <p class="lead">Não era fácil mas conseguiste {{pontuacao}} pontos!</p>
+    <p>
+      Partilha a tua pontuação: <a href="" ng-click="scoreTwitter()">Twitter</a>,&nbsp;<a href="" ng-click="scoreFacebook()">Facebook</a>,&nbsp;<a href="" ng-click="scoreEmail()">E-mail</a>
+    </p>
+    <p>
+      <a ng-click="reload()">Joga outra vez</a>
+    </p>
     <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div>
 <section id="game">
@@ -29,7 +34,7 @@
     <!--span class="refused">&nbsp;</span-->{{sorteado2}}</h2>
   </div>
   <div id="message" class="row medium-uncollapse large-collapse">
-    <p class="small-12 columns" ng-show="total >0"><strong ng-show="venceuUltimo">Acertaste!</strong><strong ng-show="!venceuUltimo">Falhaste!</strong> ({{ultimo1}} vs {{ultimo2}}) <a target="_blank" href="{{challengeLink}}">Desafia os teus amigos!</a></p>
+    <p class="small-12 columns" ng-show="total >0"><strong ng-show="venceuUltimo">Acertaste!</strong><strong ng-show="!venceuUltimo">Falhaste!</strong> ({{ultimo1}} vs {{ultimo2}}) Desafia os teus amigos: <a href="" ng-click="challengeTwitter()">Twitter</a>,&nbsp;<a href="" ng-click="challengeFacebook()">Facebook</a>,&nbsp;<a href="" ng-click="challengeMail()">E-mail</a></p>
   </div>
 </section><!-- /#game -->
 
