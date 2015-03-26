@@ -60,6 +60,27 @@ angular.module('nome.controllers', [])
                 $scope.sorteado2 = nome2;
             }
 
+            var lastLink = $location.absUrl();
+            $scope.challengeTwitter = function(){
+                var challengeLink = "https://twitter.com/intent/tweet?";
+                challengeLink += "original_referer=" + encodeURIComponent( lastLink ) +"&";
+                challengeLink += "text="+ encodeURIComponent( "Qual destes nomes foi aprovado? " + $scope.ultimo1 + " ou " + $scope.ultimo2 ) +"?"+encodeURIComponent( "#TotoNome" )+ "&";
+                challengeLink += "tw_p=tweetbutton&";
+                challengeLink += "url="+ encodeURIComponent( lastLink );
+                window.open(challengeLink,'','Toolbar=1,Location=0,Directories=0,Status=0,Menubar=0,Scrollbars=0,Resizable=0,Width=550,Height=400')
+            }
+            $scope.challengeMail = function(){
+                var link = "mailto:?subject=";
+                link += encodeURIComponent( "Qual destes nomes foi aprovado? " + $scope.ultimo1 + " ou " + $scope.ultimo2 ) +"? (TotoNome)";
+                link += "&body=";
+                link += encodeURIComponent( lastLink );
+                window.open(link,'','Toolbar=1,Location=0,Directories=0,Status=0,Menubar=0,Scrollbars=0,Resizable=0,Width=550,Height=400')
+            }
+            $scope.challengeFacebook = function(){
+                var link = "https://www.facebook.com/sharer/sharer.php?u='"+ encodeURIComponent( lastLink ) +"'";
+                window.open(link,'','Toolbar=1,Location=0,Directories=0,Status=0,Menubar=0,Scrollbars=0,Resizable=0,Width=550,Height=400')
+            }
+
             $scope.ultimaRespostaCorrecta = '';
             $scope.clicked = function(number){
                 if($scope.blocked) return
@@ -70,14 +91,7 @@ angular.module('nome.controllers', [])
 
                 Rest.postAnswer($scope.selectedWord, $scope.sorteado1, $scope.sorteado2).then(
                     function(data){
-                        // acende a resposta correcta
-
-                        $scope.challengeLink = "https://twitter.com/intent/tweet?";
-                        $scope.challengeLink += "original_referer=" + encodeURIComponent( $location.absUrl() ) +"&";
-                        $scope.challengeLink += "text="+ encodeURIComponent( "Qual é o nome correcto? " + $scope.sorteado1 + " ou " + $scope.sorteado2 ) +"&";
-                        $scope.challengeLink += "tw_p=tweetbutton&";
-                        $scope.challengeLink += "url="+ encodeURIComponent( $location.absUrl() ) +"&";
-                        $scope.challengeLink += "via=totonome";
+                        lastLink = $location.absUrl();
 
                         if(data.answer){
                             $("body").css("background-color","#91e49e");
