@@ -1,13 +1,4 @@
 /* Os nossos estilos */
-.selected{
-  background-color: #333 !important;
-}
-.unselected{
-  background-color: #666 !important;
-}
-.correct{
-  background-color: #009933 !important;
-}
 
 /* Tipografia
 */
@@ -31,6 +22,9 @@ body {
     font-family: "Lato";
 }
 
+body p {
+  font-size: 110%;
+}
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "Lato Light";
@@ -40,6 +34,10 @@ h1, h2, h3, h4, h5, h6 {
 h1#logo,
 #results p {
     font-family: "LeagueSpartan";
+}
+
+#names h2 {
+    font-family: "Lato";
 }
 
 /* Layout
@@ -63,6 +61,7 @@ h1#logo img {
 
 #game {
   text-align: center;
+  margin-top: 1.15em;
 }
 
 #results {
@@ -83,14 +82,6 @@ h1#logo img {
   margin: 0 2px;
 }
 
-#lives li {
-  background: transparent url(../img/lives.png) no-repeat 0 0;
-}
-
-#lives li.lost {
-  background: transparent url(../img/lives.png) no-repeat -101px 0;
-}
-
 #results p {
   font-size: 0.75em;
   text-transform: uppercase;
@@ -103,7 +94,7 @@ h1#logo img {
 #names #option-2 {
   padding-top: 1.5em;
   padding-bottom: 1.5em;
-  color: #f5c24d !important;
+  color: #293742 !important;
   cursor: pointer;
 }
 
@@ -111,8 +102,14 @@ h1#logo img {
   outline: 0;
 }
 
+/* dark blues
+hover - #0A2A34
+normal - #293742
+*/
+
 #option-1 {
-  background: #293742;
+  background: #fff;
+  border: 3px solid #fff;
   border-top-right-radius: 12px;
   border-top-left-radius: 12px;
   transition: background-color 0.5s ease;
@@ -121,7 +118,8 @@ h1#logo img {
 }
 
 #option-2 {
-  background: #293742;
+  background: #fff;
+  border: 3px solid #fff;
   border-bottom-right-radius: 12px;
   border-bottom-left-radius: 12px;
   transition: background-color 0.5s ease;
@@ -129,28 +127,28 @@ h1#logo img {
   -moz-transition: background-color 0.5s ease;
 }
 
-#names .approved {
-  display: inline-block;
-  padding: 0 13px;
-  background: transparent url(../img/approved.png) no-repeat center center;
-}
-
-#names .refused {
-  display: inline-block;
-  padding: 0 13px;
-  background: transparent url(../img/refused.png) no-repeat center center;
-}
-
 #option-1:hover,
 #option-1:focus,
 #option-2:hover,
 #option-2:focus {
-  background: #0A2A34;
+  background: #fde09f;
+  border: 3px solid #fff;
 }
 
+.selected{
+  background-color: #fde09f !important;
+  border: 3px solid #517e8c !important;
+}
+.unselected{
+  background-color: #fff !important;
+}
+.correct{
+  background-color: #009933 !important;
+}
+
+
 #names p.row {
-  color: #0A2A34;
-  background: #fff;
+  background: #f5c24d;
   line-height: 1;
   margin-bottom: 0;
   height: 1px;
@@ -158,12 +156,12 @@ h1#logo img {
 }
 
 #names p.row > em {
-  font-size: 90%;
-  font-style: normal;  
-  padding: 0.65em;
-  top: -.65em;
+  font-size: 80%;
+  font-style: normal; 
+  text-transform: uppercase;
+  background: #f5c24d;
+  padding: 0.85em 0.65em;
   z-index: 2500;
-  background: #fff;
   border-radius: 20px;
   -moz-border-radius: 20px;
   -webkit-border-radius: 20px;/*
@@ -178,9 +176,14 @@ h1#logo img {
 }
 
 #message p {
-  background: #0A2A34;
-  color: #fff;
+  background: #fff;
   padding: 10px;
+  border-radius: 12px;
+}
+
+#message p a {
+  color: #293742 !important;
+  border-bottom: 1px solid #fff;
 }
 
 #about {
