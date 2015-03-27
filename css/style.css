@@ -57,7 +57,7 @@ h1#logo {
 
 #main {
     text-align: center;
-    margin-top: 1.15em;
+    margin-top: 2em;
 }
 
 #results {
@@ -142,7 +142,10 @@ normal - #293742
 
 .unselected { background-color: #fff !important; }
     
-.correct { background-color: #009933 !important; }
+.correct {
+    background-color: #009933 !important;
+    border: 3px solid #00c542 !important;
+ }
 
 #game p {
     line-height: 0;

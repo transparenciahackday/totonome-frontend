@@ -2,7 +2,7 @@
     <h1 id="logo" class="small-12 small-centered columnss"><img src="img/totonome.png" alt="logotipo totonome"></h1>
 </header>
 
-<div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+<div id="myModal" class="reveal-modal medium" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
     <h2 id="modalTitle">Perdeste!</h2>
     <p class="lead">Não era fácil, mas conseguiste {{pontuacao}} pontos!</p>
     <p>
@@ -20,7 +20,7 @@
         <li ng-repeat="i in range(vidas) track by $index">&nbsp;</li><li ng-repeat="i in range(vidasIniciais-vidas) track by $index" class="lost">&nbsp;</li>
       </ul>
       <p class="row">{{pontuacao}} pontos</p>
-   </div>
+    </div>
   </div><!-- /#results-->
   <div id="game" class="row medium-uncollapse large-collapse">
     <div class="small-12 columns">
@@ -39,21 +39,21 @@
 <section id="about">
   <div class="row medium-uncollapse large-collapse">
     <div class="large-8 large-centered columns">
-        <h3>O que é o Totonome?</h3>      
+        <h2>O que é o Totonome?</h2>      
         <p>Todos os anos, milhares de nomes próprios são avaliados pelo Instituto dos Registos e do Notariado</a>, e só em 2014 houve mais de 5000 nomes enviados para consideração. <br>É assim que se determina se cada novo cidadão ou cidadã pode ter um nome menos comum.</p>
         <p>O Totonome é um jogo que testa o critério de cada pessoa para determinar se um nome próprio poderia ou não ser registado em Portugal. São apresentadas duas escolhas, e ambas provêm de pedidos de aprovação que foram feitos ao IRN: uma das escolhas foi aceite, a outra não. Consegues descobrir qual o nome que passou a ser permitido, e qual ficou pelo caminho?</p>
     </div>
   </div>
   <div class="row medium-uncollapse large-collapse">
     <div class="large-8 large-centered columns">
-        <h3>Como foi feito?</h3>
+        <h2>Como foi feito?</h2>
         <p>O Totonome é uma aplicação construída com <a href="http://angularjs.org">AngularJS</a> e <a href="http://foundation.zurb.com">Foundation</a>, junto com um pequeno servidor que usa <a href="http://django-rest-framework.org">Django REST</a> para validar e registar as escolhas. <br>Os ícones e a ilustração do título foram feitos com papel, lápis e <a href="http://inkscape.org">Inkscape</a>.</p>
         <p>O dataset dos nomes foi extraído, compilado e colocado na <a href="http://centraldedados.pt/nomes_proprios/">Central de Dados</a>, usando o <a href="http://tabula.technology">Tabula</a> e <a href="https://csvkit.readthedocs.org/">CSVkit</a>, com o propósito principal de ser empregue neste jogo. <br>A <a href="http://www.irn.mj.pt/sections/irn/a_registral/registos-centrais/docs-da-nacionalidade/vocabulos-admitidos-e/">base de dados original</a> é disponibilizada no <a href="http://irn.mj.pt">site</a> do IRN.</p>
     </div>
   </div>
   <div class="row medium-uncollapse large-collapse">
     <div class="large-8 large-centered columns">
-        <h3>Quem fez?</h3>
+        <h2>Quem fez?</h2>
         <p>A ideia original e um primeiro protótipo foram congeminados durante uma sessão de trabalho do <a href="http://transparenciahackday.org">Transparência Hackday Portugal</a>. <br>O jogo foi mostrado ao público pela primeira vez no <a href="http://transparenciahackday.org/2015/03/open-data-day-2015-o-rescaldo/">Open Data Day Portugal 2015</a>.</p>
         <p class="no-margin">A versão atual do jogo tem sido afinada e mantida por:</p>
         <ul class="credits">
