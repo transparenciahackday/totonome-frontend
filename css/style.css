@@ -22,12 +22,13 @@ body {
     font-family: "Lato";
 }
 
-body p {
-  font-size: 110%;
+body p, ul {
+    font-size: 110%;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "Lato Light";
+    text-align: center;
 }
 
 h1#logo,
@@ -50,59 +51,55 @@ body {
 }
 
 h1#logo {
-  text-align: center;
-  margin-top: -10px;
+    text-align: center;
+    margin-top: -10px;
 }
 
 #main {
-  text-align: center;
-  margin-top: 1.15em;
+    text-align: center;
+    margin-top: 1.15em;
 }
 
 #results {
-  text-align: right;
+    text-align: right;
 }
 
 #lives {
-  height: 19px;
-  margin: 0;
-  padding: 0;
+    height: 19px;
+    margin: 0;
+    padding: 0;
 }
 
 #lives li {
-  display: inline-block;
-  width: 22px;
-  height: 19px;
-  overflow: hidden;
-  margin: 0 2px;
+    display: inline-block;
+    width: 22px;
+    height: 19px;
+    overflow: hidden;
+    margin: 0 2px;
 }
 
-#lives li {
-  background: transparent url(../img/lives.png) no-repeat 0 0;
-}
+#lives li { background: transparent url(../img/lives.png) no-repeat 0 0; }
 
-#lives li.lost {
-  background: transparent url(../img/lives.png) no-repeat -101px 0;
-}
+#lives li.lost { background: transparent url(../img/lives.png) no-repeat -101px 0; }
 
 #results p {
-  font-size: 0.75em;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  padding: 5px 0 0;
-  margin: 0;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 5px 0 0;
+    margin: 0;
 }
 
 #game #option-1,
 #game #option-2 {
-  padding-top: 1.5em;
-  padding-bottom: 1.5em;
-  color: #293742 !important;
-  cursor: pointer;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    color: #293742 !important;
+    cursor: pointer;
 }
 
 #game h2:focus {
-  outline: 0;
+    outline: 0;
 }
 
 /* dark blues
@@ -111,97 +108,111 @@ normal - #293742
 */
 
 #option-1 {
-  background: #fff;
-  border: 3px solid #fff;
-  border-top-right-radius: 12px;
-  border-top-left-radius: 12px;
-  transition: background-color 0.5s ease;
-  -webkit-transition: background-color 0.5s ease;
-  -moz-transition: background-color 0.5s ease;
+    background: #fef4dd;
+    border: 3px solid #fef4dd;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    transition: background-color 0.5s ease;
+    -webkit-transition: background-color 0.5s ease;
+    -moz-transition: background-color 0.5s ease;
 }
 
 #option-2 {
-  background: #fff;
-  border: 3px solid #fff;
-  border-bottom-right-radius: 12px;
-  border-bottom-left-radius: 12px;
-  transition: background-color 0.5s ease;
-  -webkit-transition: background-color 0.5s ease;
-  -moz-transition: background-color 0.5s ease;
+    background: #fef4dd;
+    border: 3px solid #fef4dd;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    transition: background-color 0.5s ease;
+    -webkit-transition: background-color 0.5s ease;
+    -moz-transition: background-color 0.5s ease;
 }
 
 #option-1:hover,
 #option-1:focus,
 #option-2:hover,
 #option-2:focus {
-  background: #fde09f;
-  border: 3px solid #fff;
+    background: #fde09f;
+    border: 3px solid #fff;
 }
 
 .selected{
-  background-color: #fde09f !important;
-  border: 3px solid #517e8c !important;
-}
-.unselected{
-  background-color: #fff !important;
-}
-.correct{
-  background-color: #009933 !important;
+    background-color: #fde09f !important;
+    border: 3px solid #f4bb39 !important;
 }
 
+.unselected { background-color: #fff !important; }
+    
+.correct { background-color: #009933 !important; }
 
 #game p {
-  background: #f5c24d;
-  line-height: 1;
-  margin-bottom: 0;
-  height: 1px;
-  text-align: center;
+    line-height: 0;
+    text-align: center;
+    background: #f5c24d;
+    margin-bottom: 0;
+    height: 1px;
 }
 
 #game p > em {
-  font-size: 80%;
-  font-style: normal; 
-  text-transform: uppercase;
-  background: #f5c24d;
-  padding: 0.85em 0.65em;
-  z-index: 2500;
-  border-radius: 20px;
-  -moz-border-radius: 20px;
-  -webkit-border-radius: 20px;/*
-  box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
-  -moz-box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
-  -webkit-box-shadow: 0px 0px 5px rgba(0,0,0,0.5);*/
+    font-size: 80%;
+    font-style: normal; 
+    text-transform: uppercase;
+    background: #f5c24d;
+    padding: 0.85em 0.65em;
+    z-index: 2500;
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
 }
 
 #message {
-  margin-top: 20px;
-  font-size: 1.25em;
+    color: #293742;
+    margin-top: 20px;
 }
 
 #message p {
-  background: #fff;
-  padding: 10px;
-  border-radius: 12px;
-  -moz-border-radius: 12px;
-  -webkit-border-radius: 12px;
+    background: #f5c24d;
+    padding: 5px 10px;
+    border-radius: 12px;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px;
 }
 
 #message p a {
-
-  border-bottom: 1px solid #fff;
 }
 
 #about {
-  margin-top: 5em;
+    margin-top: 2em;
+    text-align: center;
+}
+
+#about div.row {
+    margin-bottom: 1em;
+}
+
+#about div.columns {
+    border-bottom: 1px solid #fff;
+}
+
+#about p.no-margin {
+  margin-bottom: 0;
+}
+
+#about li {
+    list-style-type: none;
 }
 
 #footer {
     margin-top: 4em;
     font-size: 80%;
+    text-align: center;
 }
 
 /* Diálogo de "Perdeste!"
 */
+
+.reveal-modal-bg {
+    position: fixed;
+}
 
 #myModal {
     text-align: center;
@@ -210,8 +221,11 @@ normal - #293742
     border: 0;
 }
 
-
 #myModal h2 { color: #fff !important; }
+
+#myModal p a {
+  color: #f4bb39;
+}
 
 #myModal p a.btn {
   font-size: 70%;

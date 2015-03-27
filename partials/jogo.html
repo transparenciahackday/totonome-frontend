@@ -1,5 +1,5 @@
 <header class="row medium-uncollapse large-collapse">
-    <h1 id="logo" class="small-12 small-centered columns"><img src="img/totonome.png" alt="logotipo totonome"></h1>
+    <h1 id="logo" class="small-12 small-centered columnss"><img src="img/totonome.png" alt="logotipo totonome"></h1>
 </header>
 
 <div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
@@ -17,56 +17,57 @@
     <h3 class="large-8 large-offset-2 small-12 columns">Qual destes nomes foi aprovado?</h3>
     <div id="results" class="large-2 small-12 columns">
       <ul id="lives" class="row">
-        <li ng-repeat="i in range(vidas) track by $index">&nbsp;</li>
-        <li ng-repeat="i in range(vidasIniciais-vidas) track by $index" class="lost">&nbsp;</li>
+        <li ng-repeat="i in range(vidas) track by $index">&nbsp;</li><li ng-repeat="i in range(vidasIniciais-vidas) track by $index" class="lost">&nbsp;</li>
       </ul>
       <p class="row">{{pontuacao}} pontos</p>
    </div>
-  </div>
+  </div><!-- /#results-->
   <div id="game" class="row medium-uncollapse large-collapse">
     <div class="small-12 columns">
       <h2 id="option-1" ng-click="clicked(0)" stop-event 
-        ng-class="ultimaRespostaCorrecta!=''?(ultimaRespostaCorrecta==sorteado1?'correct':''):(selectedWord==sorteado1?'selected':(blocked?'unselected':''))">
-      <!--span class="approved">&nbsp;</span-->{{sorteado1}}</h2>
+        ng-class="ultimaRespostaCorrecta!=''?(ultimaRespostaCorrecta==sorteado1?'correct':''):(selectedWord==sorteado1?'selected':(blocked?'unselected':''))">{{sorteado1}}</h2>
       <p><em>Ou</em></p>
       <h2 id="option-2" ng-click="clicked(1)" stop-event 
-        ng-class="ultimaRespostaCorrecta!=''?(ultimaRespostaCorrecta==sorteado2?'correct':''):(selectedWord==sorteado2?'selected':(blocked?'unselected':''))">
-      <!--span class="refused">&nbsp;</span-->{{sorteado2}}</h2>
+        ng-class="ultimaRespostaCorrecta!=''?(ultimaRespostaCorrecta==sorteado2?'correct':''):(selectedWord==sorteado2?'selected':(blocked?'unselected':''))">{{sorteado2}}</h2>
     </div>
   </div><!-- /#game -->
   <div id="message" class="row medium-uncollapse large-collapse">
     <p class="small-12 columns" ng-show="total >0"><strong ng-show="venceuUltimo">Acertaste!</strong><strong ng-show="!venceuUltimo">Falhaste!</strong> ({{ultimo1}} vs {{ultimo2}}) Desafia os teus amigos: <a href="" ng-click="challengeTwitter()">Twitter</a>,&nbsp;<a href="" ng-click="challengeFacebook()">Facebook</a>,&nbsp;<a href="" ng-click="challengeMail()">E-mail</a></p>
-  </div>
+  </div><!-- /#message -->
 </section><!-- /#main -->
 
-<section id="about" class="row medium-uncollapse large-collapse">
-
-    <h3 class="small-12 columns">O que é o Totonome?</h3>
-    
-    <p class="small-12 columns">Todos os anos, milhares de nomes próprios são avaliados pelo Instituto dos Registos e do Notariado</a>, e só em 2014 houve mais de 5000 nomes enviados para consideração.  É assim que se determina se cada novo cidadão ou cidadã pode ter um nome menos comum.</p>
-    <p class="small-12 columns">O Totonome é um jogo que testa o critério de cada pessoa para determinar se um nome próprio poderia ou não ser registado em Portugal. São apresentadas duas escolhas, e ambas provêm de pedidos de aprovação que foram feitos ao IRN: uma das escolhas foi aceite, a outra não. Consegues descobrir qual o nome que passou a ser permitido, e qual ficou pelo caminho?</p>
-
-    <h3 class="small-12 columns">Como foi feito?</h3>
-
-    <p class="small-12 columns">O Totonome é uma aplicação construída com <a href="http://angularjs.org">AngularJS</a> e <a href="http://foundation.zurb.com">Foundation</a>, junto com um pequeno servidor que usa <a href="http://django-rest-framework.org">Django REST</a> para validar e registar as escolhas. Os ícones e a ilustração do título foram feitos com papel, lápis e <a href="http://inkscape.org">Inkscape</a>.</p>
-    <p class="small-12 columns">O dataset dos nomes foi extraído, compilado e colocado na <a href="http://centraldedados.pt/nomes_proprios/">Central de Dados</a>, usando o <a href="http://tabula.technology">Tabula</a> e <a href="https://csvkit.readthedocs.org/">CSVkit</a>, com o propósito principal de ser empregue neste jogo.  A <a href="http://www.irn.mj.pt/sections/irn/a_registral/registos-centrais/docs-da-nacionalidade/vocabulos-admitidos-e/">base de dados original</a> é disponibilizada no <a href="http://irn.mj.pt">site</a> do IRN.</p>
-
-    <h3 class="small-12 columns">Quem fez?</h3>
-    <p class="small-12 columns">A ideia original e um primeiro protótipo foram congeminados durante uma sessão de trabalho do <a href="http://transparenciahackday.org">Transparência Hackday Portugal</a>. O jogo foi mostrado ao público pela primeira vez no <a href="http://transparenciahackday.org/2015/03/open-data-day-2015-o-rescaldo/">Open Data Day Portugal 2015</a>.</p>
-    <p class="small-12 columns">A versão atual do jogo tem sido afinada e mantida por:</p>
-    <ul>
-      <li><a href="http://tiagovieira.pt">Tiago Vieira</a> &ndash; development do back-end</li>
-      <li><a href="http://twitter.com/aiscarvalho">Ana Isabel Carvalho</a> &ndash; design do front-end</li>
-      <li><a href="http://twitter.com/rlaf">Ricardo Lafuente</a> &ndash; arquitetura de dados e copywriting</li>
-    </ul>
-    <p class="small-12 columns">O Totonome contou igualmente com os preciosos contributos da Isa Neves, da Marlene Martins, da Margarida Carvalho e do Pedro Fernandes.</p>
-
+<section id="about">
+  <div class="row medium-uncollapse large-collapse">
+    <div class="large-8 large-centered columns">
+        <h3>O que é o Totonome?</h3>      
+        <p>Todos os anos, milhares de nomes próprios são avaliados pelo Instituto dos Registos e do Notariado</a>, e só em 2014 houve mais de 5000 nomes enviados para consideração. <br>É assim que se determina se cada novo cidadão ou cidadã pode ter um nome menos comum.</p>
+        <p>O Totonome é um jogo que testa o critério de cada pessoa para determinar se um nome próprio poderia ou não ser registado em Portugal. São apresentadas duas escolhas, e ambas provêm de pedidos de aprovação que foram feitos ao IRN: uma das escolhas foi aceite, a outra não. Consegues descobrir qual o nome que passou a ser permitido, e qual ficou pelo caminho?</p>
+    </div>
+  </div>
+  <div class="row medium-uncollapse large-collapse">
+    <div class="large-8 large-centered columns">
+        <h3>Como foi feito?</h3>
+        <p>O Totonome é uma aplicação construída com <a href="http://angularjs.org">AngularJS</a> e <a href="http://foundation.zurb.com">Foundation</a>, junto com um pequeno servidor que usa <a href="http://django-rest-framework.org">Django REST</a> para validar e registar as escolhas. <br>Os ícones e a ilustração do título foram feitos com papel, lápis e <a href="http://inkscape.org">Inkscape</a>.</p>
+        <p>O dataset dos nomes foi extraído, compilado e colocado na <a href="http://centraldedados.pt/nomes_proprios/">Central de Dados</a>, usando o <a href="http://tabula.technology">Tabula</a> e <a href="https://csvkit.readthedocs.org/">CSVkit</a>, com o propósito principal de ser empregue neste jogo. <br>A <a href="http://www.irn.mj.pt/sections/irn/a_registral/registos-centrais/docs-da-nacionalidade/vocabulos-admitidos-e/">base de dados original</a> é disponibilizada no <a href="http://irn.mj.pt">site</a> do IRN.</p>
+    </div>
+  </div>
+  <div class="row medium-uncollapse large-collapse">
+    <div class="large-8 large-centered columns">
+        <h3>Quem fez?</h3>
+        <p>A ideia original e um primeiro protótipo foram congeminados durante uma sessão de trabalho do <a href="http://transparenciahackday.org">Transparência Hackday Portugal</a>. <br>O jogo foi mostrado ao público pela primeira vez no <a href="http://transparenciahackday.org/2015/03/open-data-day-2015-o-rescaldo/">Open Data Day Portugal 2015</a>.</p>
+        <p class="no-margin">A versão atual do jogo tem sido afinada e mantida por:</p>
+        <ul class="credits">
+          <li><a href="http://tiagovieira.pt">Tiago Vieira</a> &ndash; development do back-end</li>
+          <li><a href="http://twitter.com/aiscarvalho">Ana Isabel Carvalho</a> &ndash; design do front-end</li>
+          <li><a href="http://twitter.com/rlaf">Ricardo Lafuente</a> &ndash; arquitetura de dados e copywriting</li>
+        </ul>
+        <p>O Totonome contou igualmente com os preciosos contributos da Isa Neves, da Marlene Martins, da Margarida Carvalho e do Pedro Fernandes.</p>
+    </div>
+  </div>
 </section><!-- /#about -->
 
-
-
 <footer id="footer" class="row medium-uncollapse large-collapse">
-  <p class="small-12 columns">
+  <p class="large-8 large-centered columns">
     Um projeto criado no <a href="http://transparenciahackday.org">Transparência Hackday</a> com a ajuda da <a href="http://centraldedados.pt">Central de Dados</a>.
   </p>
 </footer>
