@@ -93,7 +93,7 @@ angular.module('nome.controllers', [])
                 challengeLink += "url="+ encodeURIComponent( "http://" + $location.host() );
                 window.open(challengeLink,'','Toolbar=1,Location=0,Directories=0,Status=0,Menubar=0,Scrollbars=0,Resizable=0,Width=550,Height=400')
             }
-            $scope.scoreMail = function(){
+            $scope.scoreEmail = function(){
                 var link = "mailto:?subject=";
                 link += encodeURIComponent( "Consegui " + $scope.pontuacao + " pontos! E tu, quantos consegues? (TotoNome)" );
                 link += "&body=";
