@@ -5,6 +5,11 @@ angular.module('nome.controllers', [])
             var correct = new Audio('../sounds/correct.mp3');
             var wrong = new Audio('../sounds/wrong.mp3');
 
+            $scope.soundOn = false;
+            $scope.changeSound = function(){
+                $scope.soundOn = !$scope.soundOn;
+            }
+
             $scope.range = function(n) {
                 return new Array(n);
             };
@@ -77,7 +82,26 @@ angular.module('nome.controllers', [])
                 window.open(link,'','Toolbar=1,Location=0,Directories=0,Status=0,Menubar=0,Scrollbars=0,Resizable=0,Width=550,Height=400')
             }
             $scope.challengeFacebook = function(){
-                var link = "https://www.facebook.com/sharer/sharer.php?u='"+ encodeURIComponent( lastLink ) +"'";
+                var link = "https://www.facebook.com/sharer/sharer.php?u="+ encodeURIComponent( lastLink );
+                window.open(link,'','Toolbar=1,Location=0,Directories=0,Status=0,Menubar=0,Scrollbars=0,Resizable=0,Width=550,Height=400')
+            }
+            $scope.scoreTwitter = function(){
+                var challengeLink = "https://twitter.com/intent/tweet?";
+                challengeLink += "original_referer=" + encodeURIComponent( "http://" + $location.host() ) +"&";
+                challengeLink += "text="+ encodeURIComponent( "Consegui " + $scope.pontuacao + " pontos! E tu, quantos consegues?" ) +encodeURIComponent( "#TotoNome" )+ "&";
+                challengeLink += "tw_p=tweetbutton&";
+                challengeLink += "url="+ encodeURIComponent( "http://" + $location.host() );
+                window.open(challengeLink,'','Toolbar=1,Location=0,Directories=0,Status=0,Menubar=0,Scrollbars=0,Resizable=0,Width=550,Height=400')
+            }
+            $scope.scoreMail = function(){
+                var link = "mailto:?subject=";
+                link += encodeURIComponent( "Consegui " + $scope.pontuacao + " pontos! E tu, quantos consegues? (TotoNome)" );
+                link += "&body=";
+                link += encodeURIComponent( "http://" + $location.host() );
+                window.open(link,'','Toolbar=1,Location=0,Directories=0,Status=0,Menubar=0,Scrollbars=0,Resizable=0,Width=550,Height=400')
+            }
+            $scope.scoreFacebook = function(){
+                var link = "https://www.facebook.com/sharer/sharer.php?u="+ encodeURIComponent( "http://" + $location.host() );
                 window.open(link,'','Toolbar=1,Location=0,Directories=0,Status=0,Menubar=0,Scrollbars=0,Resizable=0,Width=550,Height=400')
             }
 
@@ -98,10 +122,14 @@ angular.module('nome.controllers', [])
                             $scope.pontuacao += 100;
                             $scope.venceuUltimo = true;
                             $scope.ultimaRespostaCorrecta = $scope.selectedWord;
-                            correct.play();
+                            if($scope.soundOn){
+                                correct.play();
+                            }
                         }
                         else{
-                            wrong.play();
+                            if($scope.soundOn){
+                                wrong.play();
+                            }
                             $("body").css("background-color","#f48a71");
                             $scope.venceuUltimo = false;
                             $scope.vidas -= 1
@@ -113,14 +141,6 @@ angular.module('nome.controllers', [])
                             }
 
                             if ($scope.vidas <= 0) {
-                                console.log($location.absUrl());
-                                console.log($location.host());
-                                $scope.scoreLink = "https://twitter.com/intent/tweet?";
-                                $scope.scoreLink += "original_referer=" + encodeURIComponent( "http://" + $location.host() ) +"&";
-                                $scope.scoreLink += "text="+ encodeURIComponent( "Consegui " + $scope.pontuacao + " pontos! E tu, quantos consegues?" ) +"&";
-                                $scope.scoreLink += "tw_p=tweetbutton&";
-                                $scope.scoreLink += "url="+ encodeURIComponent( "http://" + $location.host() ) +"&";
-                                $scope.scoreLink += "via=totonome";
                                 $('#myModal').foundation('reveal', 'open');
                             }
                         }
