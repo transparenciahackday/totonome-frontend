@@ -1,9 +1,11 @@
 angular.module('nome.controllers', [])
-    .controller('jogoCtrl', ["$scope", "Rest", "$timeout", "$routeParams", "$location", "$window",
-        function($scope, Rest, $timeout, $routeParams, $location, $window) {
+    .controller('jogoCtrl', ["$scope", "Rest", "$timeout", "$routeParams", "$location", "$window", "$interval",
+        function($scope, Rest, $timeout, $routeParams, $location, $window, $interval) {
 
             var correct = new Audio('../sounds/correct.mp3');
             var wrong = new Audio('../sounds/wrong.mp3');
+
+            $scope.connecting = false;
 
             $scope.soundOn = false;
             $scope.changeSound = function(){
@@ -48,6 +50,8 @@ angular.module('nome.controllers', [])
             $scope.ultimo1 = "";
             $scope.ultimo2 = "";
             $scope.venceuUltimo = false;
+
+            // comentar este if todo para fazer aparecer o "ligar o servidor"
 
             if (!nome1 || !nome2) {
                 Rest.getInitialWords().then(
@@ -168,5 +172,27 @@ angular.module('nome.controllers', [])
                     }
                 )
             }
+            var waited = 0;
+            var interval;
+
+            $scope.stopInterval = function(){
+                $interval.cancel(interval);
+            };
+
+            interval =  $interval(function() {
+                if(waited > 1000){
+                    if($routeParams.nome1){
+                        $scope.stopInterval();
+                    }
+                    else{
+                        $scope.connecting = true;
+                    }
+                }
+                waited += 100;
+            }, 100);
+
+            $scope.$on('$destroy', function() {
+                $scope.stopInterval();
+            });
         }
     ]);

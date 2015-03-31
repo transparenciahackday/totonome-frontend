@@ -1,5 +1,34 @@
 /* Os nossos estilos */
 
+.connecting{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 999999;
+    position: absolute;
+}
+.connecting > span {
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    width: 300px;
+    height: 150px;
+    background: rgba(34, 34, 34, 1);
+    color: white;
+    z-index: 1000000;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 35px;
+}
+.connecting > span > p{
+    padding-top: 5px;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
 .sound{
     width: 50px;
     height: 50px;
