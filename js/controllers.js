@@ -4,6 +4,8 @@ angular.module('nome.controllers', [])
 
             var correct = new Audio('../sounds/correct.mp3');
             var wrong = new Audio('../sounds/wrong.mp3');
+            correct.load();
+            wrong.load();
 
             $scope.connecting = false;
 
@@ -182,6 +184,7 @@ angular.module('nome.controllers', [])
             interval =  $interval(function() {
                 if(waited > 1000){
                     if($routeParams.nome1){
+                        $scope.connecting = false;
                         $scope.stopInterval();
                     }
                     else{
