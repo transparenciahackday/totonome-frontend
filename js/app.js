@@ -25,4 +25,8 @@ angular.module('nome').run(function($rootScope) {
 
 angular.module('nome').config(function($locationProvider){
     $locationProvider.html5Mode(true).hashPrefix('!');
+    $locationProvider.html5Mode({
+        enabled: true,
+        requireBase: false
+    });
 });
