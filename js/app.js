@@ -20,7 +20,8 @@ angular.module('nome', [
 
 angular.module('nome').run(function($rootScope) {
     //$rootScope.serverAddress = "http://localhost:80/"
-    $rootScope.serverAddress = "https://totonome.herokuapp.com/";
+    //$rootScope.serverAddress = "https://totonome.herokuapp.com/";
+    $rootScope.serverAddress = "http://totonome.rlafuente.webfactional.com/";
 });
 
 angular.module('nome').config(function($locationProvider){
