@@ -20,7 +20,6 @@
   <p>A ligar o servidor...</p>
 </span>
 </div>
-<a href="#" ng-click="changeSound()" class="sound" ng-class="soundOn?'':'mute'"></a>
 <header class="row medium-uncollapse large-collapse">
     <h1 id="logo" class="small-12 small-centered columnss"><img src="img/totonome.png" alt="logotipo totonome"></h1>
 </header>
@@ -36,13 +35,16 @@
 </div>
 <section id="main">
   <div class="row medium-uncollapse large-collapse">
-    <h3 class="large-8 large-offset-2 small-12 columns">Qual destes nomes foi aprovado?</h3>
-    <div id="results" class="large-2 small-12 columns">
+    <h3 class="large-6 large-offset-3 small-12 columns">Qual destes nomes foi aprovado?</h3>
+    <div id="results" class="large-2 small-8 columns">
       <ul id="lives" class="row">
         <li ng-repeat="i in range(vidas) track by $index">&nbsp;</li><li ng-repeat="i in range(vidasIniciais-vidas) track by $index" class="lost">&nbsp;</li>
       </ul>
-      <p class="row">{{pontuacao}} pontos</p>
+      <p class="points row">{{pontuacao}} pontos</p>
     </div>
+    <p class="sound-btn large-1 small-4 columns">
+      <a href="#" ng-click="changeSound()" class="sound" ng-class="soundOn?'':'mute'"></a>
+    </p>
   </div><!-- /#results-->
   <div id="game" class="row medium-uncollapse large-collapse">
     <div class="small-12 columns">
