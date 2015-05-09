@@ -35,14 +35,14 @@
 </div>
 <section id="main">
   <div class="row medium-uncollapse large-collapse">
-    <h3 class="large-6 large-offset-3 small-12 columns">Qual destes nomes foi aprovado?</h3>
-    <div id="results" class="large-2 small-8 columns">
+    <h3 class="large-6 large-offset-3 medium-8 small-12 columns">Qual destes nomes foi aprovado?</h3>
+    <div id="results" class="large-2 medium-3 small-8 columns">
       <ul id="lives" class="row">
         <li ng-repeat="i in range(vidas) track by $index">&nbsp;</li><li ng-repeat="i in range(vidasIniciais-vidas) track by $index" class="lost">&nbsp;</li>
       </ul>
       <p class="points row">{{pontuacao}} pontos</p>
     </div>
-    <p class="sound-btn large-1 small-4 columns">
+    <p class="sound-btn large-1 medium-1 small-4 columns">
       <a href="#" ng-click="changeSound()" class="sound" ng-class="soundOn?'':'mute'"></a>
     </p>
   </div><!-- /#results-->
